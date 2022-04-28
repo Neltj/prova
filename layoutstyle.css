@@ -45,6 +45,7 @@ footer {
 }
 
 main {
+    position: relative;;
     background-color: hsl(300, 100%, 60%);
     grid-row: 3;
     grid-column: span 9;
@@ -56,7 +57,7 @@ header {
 }
 
 .feature {
-    /* display: relative; */
+    position: relative;
     background-color: hsl(270, 100%, 60%);
     grid-column: span 4;
 }
@@ -68,7 +69,7 @@ header {
 }
 
 img {
-    display: absolute;
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
