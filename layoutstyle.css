@@ -1,0 +1,67 @@
+/* CSS GRID
+
+Con la proprietà grid-row-start ci indica numeri di linea.
+
+Con lo short-hand abbiamo grid-row: grow-row-start / grow-row-end
+Con lo short-hand abbiamo grid-column: grow-column-start / grow-column-end
+
+abbiamo un altra forma per dare i valori di row-start/end e column-start/end, contando in colonne con span nel esempio di sotto
+abbiamo 2 colonne quindi invece di mettere il valore 3 di (3 linee) usiamo lo span per le colonne secondo me è meglio.
+
+Con la funzione repeat() ci permette creare nuovi tracks, e riceve 4 parametri:
+Es:
+
+grid-template-columns: repeat();
+- Il primo valore è la quantità di tracks
+- Il secondo valore è la larghezza o l'altezza dipende se sono righe o colonne per ognuno di quei tracks
+
+*/
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 4em 8em 1fr 4em;
+    gap: 1em;
+}
+
+aside {
+    background-color: hsl(200, 100%, 60%);
+    grid-row: 3;
+    grid-column: 1 / span 3;
+}
+
+footer {
+    background-color: hsl(100, 100%, 60%);
+    grid-column: 1 / span 12;
+}
+
+main {
+    background-color: hsl(300, 100%, 60%);
+    grid-row: 3;
+    grid-column: span 9;
+}
+
+header {
+    background-color: hsl(60, 100%, 60%);
+    grid-column: 1 / span 12;
+}
+
+.feature {
+    background-color: hsl(270, 100%, 60%);
+    grid-column: span 4;
+}
+
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
